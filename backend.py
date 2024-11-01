@@ -2,6 +2,10 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
+@app.route('/favicon.ico', methods=['GET'])
+def favicon():
+    return '', 404
+
 
 @app.route('/save', methods=['POST'])
 def save_data():
